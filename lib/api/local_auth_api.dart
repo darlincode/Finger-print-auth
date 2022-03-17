@@ -7,6 +7,7 @@ class LocalAuthApi {
   static Future<bool> hasBiometrics() async {
     try {
       return await _auth.canCheckBiometrics;
+    // ignore: unused_catch_clause
     } on PlatformException catch (e) {
       return false;
     }
@@ -15,6 +16,7 @@ class LocalAuthApi {
   static Future<List<BiometricType>> getBiometrics() async {
     try {
       return await _auth.getAvailableBiometrics();
+    // ignore: unused_catch_clause
     } on PlatformException catch (e) {
       return <BiometricType>[];
     }
@@ -30,6 +32,7 @@ class LocalAuthApi {
         useErrorDialogs: true,
         stickyAuth: true,
       );
+    // ignore: unused_catch_clause
     } on PlatformException catch (e) {
       return false;
     }
