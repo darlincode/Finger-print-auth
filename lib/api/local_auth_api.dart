@@ -20,8 +20,8 @@ class LocalAuthApi  {
      } on PlatformException catch (e) {
        return <BiometricType>[];
      }
-   }
-
+    }
+ 
    static Future<bool> authenticate() async {
      final isAvailable = await hasBiometrics();
      if (!isAvailable) return false;
