@@ -18,8 +18,8 @@ class FingerprintPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 buildAvailability(context),
-                SizedBox(height: 24),
-                buildAuthenticate(context),
+                SizedBox(height: 23),
+                FingerprintPage()
               ],
             ),
           ),
@@ -53,19 +53,21 @@ class FingerprintPage extends StatelessWidget {
       );
 
   Widget buildText(String text, bool checked) => Container(
-        margin: EdgeInsets.symmetric(vertical: 8),
+        margin: EdgeInsets.symmetric(vertical: 9),
         child: Row(
           children: [
             checked
-                ? Icon(Icons.check, color: Colors.green, size: 24)
-                : Icon(Icons.close, color: Colors.red, size: 24),
-            const SizedBox(width: 12),
-            Text(text, style: TextStyle(fontSize: 24)),
+                ? Icon(Icons.check,
+                    color: Color.fromARGB(255, 0, 107, 4), size: 24)
+                : Icon(Icons.close, color: Colors.red, size: 25),
+            const SizedBox(width: 13),
+            Text(text, style: TextStyle(fontSize: 25)),
           ],
         ),
       );
 
-  Widget buildAuthenticate(BuildContext context) => buildButton(
+  Widget buildAuthenticate(BuildContext context, Type fingerprintPage) =>
+      buildButton(
         text: 'Authenticate',
         icon: Icons.lock_open,
         onClicked: () async {

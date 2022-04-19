@@ -1,0 +1,94 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter emulators
+
+## exception
+
+ProcessPackageException: ProcessException: Found candidates, but lacked sufficient permissions to execute "/home/mrinc/Android/Sdk/emulator/emulator".
+  Command: /home/mrinc/Android/Sdk/emulator/emulator 
+
+```
+#0      LocalProcessManager.run (package:process/src/interface/local_process_manager.dart:87:7)
+#1      ErrorHandlingProcessManager.run.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:669:24)
+#2      _run (package:flutter_tools/src/base/error_handling_io.dart:567:20)
+#3      ErrorHandlingProcessManager.run (package:flutter_tools/src/base/error_handling_io.dart:668:12)
+#4      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:267:59)
+#5      AndroidEmulators._getEmulatorAvds (package:flutter_tools/src/android/android_emulator.dart:63:56)
+#6      AndroidEmulators.emulators (package:flutter_tools/src/android/android_emulator.dart:54:43)
+#7      EmulatorManager.getAllAvailableEmulators.<anonymous closure> (package:flutter_tools/src/emulator.dart:85:41)
+#8      EmulatorManager.getAllAvailableEmulators.<anonymous closure> (package:flutter_tools/src/emulator.dart:84:67)
+#9      Future.forEach.<anonymous closure> (dart:async/future.dart:573:26)
+#10     Future.doWhile.<anonymous closure> (dart:async/future.dart:613:26)
+#11     _rootRunUnary (dart:async/zone.dart:1434:47)
+#12     _CustomZone.runUnary (dart:async/zone.dart:1335:19)
+#13     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1244:7)
+#14     _CustomZone.bindUnaryCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1281:26)
+#15     Future.doWhile (dart:async/future.dart:629:18)
+#16     Future.forEach (dart:async/future.dart:571:12)
+#17     EmulatorManager.getAllAvailableEmulators (package:flutter_tools/src/emulator.dart:84:18)
+#18     EmulatorsCommand._listEmulators (package:flutter_tools/src/commands/emulators.dart:96:33)
+#19     EmulatorsCommand.runCommand (package:flutter_tools/src/commands/emulators.dart:59:13)
+#20     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1320:12)
+<asynchronous suspension>
+#21     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1161:27)
+<asynchronous suspension>
+#22     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#23     CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#24     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+<asynchronous suspension>
+#25     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#26     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#27     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#28     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#29     main (package:flutter_tools/executable.dart:94:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.10.2, on Ubuntu 20.04.4 LTS 5.13.0-35-generic, locale en_US.UTF-8)
+    • Flutter version 2.10.2 at /home/mrinc/snap/flutter/common/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 097d3313d8 (7 weeks ago), 2022-02-18 19:33:08 -0600
+    • Engine revision a83ed0e5e3
+    • Dart version 2.16.1
+    • DevTools version 2.9.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 32.1.0-rc1)
+    • Android SDK at /home/mrinc/Android/Sdk
+    • Platform android-32, build-tools 32.1.0-rc1
+    • Java binary at: /snap/android-studio/119/android-studio/jre/bin/java
+    • Java version OpenJDK Runtime Environment (build 11.0.11+0-b60-7590822)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at google-chrome
+
+[✓] Android Studio (version 2021.1)
+    • Android Studio at /snap/android-studio/119/android-studio
+    • Flutter plugin version 64.1.2
+    • Dart plugin version 211.7798
+    • Java version OpenJDK Runtime Environment (build 11.0.11+0-b60-7590822)
+
+[✓] VS Code
+    • VS Code at /snap/code/current
+    • Flutter extension version 3.38.1
+
+[✓] Connected device (1 available)
+    • Chrome (web) • chrome • web-javascript • Google Chrome 98.0.4758.102
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+• No issues found!
+```

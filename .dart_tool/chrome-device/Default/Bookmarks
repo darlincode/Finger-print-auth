@@ -1,5 +1,5 @@
 {
-   "checksum": "4e04d8e5d85bf6cdc1a5eba0e704830d",
+   "checksum": "6a9c372b7fea884e5d15e0072aa68682",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -9,9 +9,16 @@
             "name": "fingerprint_auth",
             "type": "url",
             "url": "http://localhost:43015/"
+         }, {
+            "date_added": "13294228592683453",
+            "guid": "65e9a088-dec3-424f-a3cc-3212c0f7474f",
+            "id": "7",
+            "name": "fingerprint_auth",
+            "type": "url",
+            "url": "http://localhost:39675/"
          } ],
          "date_added": "13291904018283505",
-         "date_modified": "13291904048481113",
+         "date_modified": "13294228592683453",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks bar",

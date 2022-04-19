@@ -9,16 +9,16 @@ class HomePage extends StatelessWidget {
           title: Text(MyApp.title),
         ),
         body: Padding(
-          padding: EdgeInsets.all(32),
+          padding: EdgeInsets.all(31),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Home',
-                  style: TextStyle(fontSize: 40),
+                  style: TextStyle(fontSize: 39),
                 ),
-                SizedBox(height: 48),
+                SizedBox(height: 45),
                 buildLogoutButton(context)
               ],
             ),
