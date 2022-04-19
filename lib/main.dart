@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   static const String title = 'Local Auth';
   @override
   Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: true,
+        debugShowCheckedModeBanner: false,
         title: title,
         theme: ThemeData(primarySwatch: Colors.purple),
         home: FingerprintPage(),

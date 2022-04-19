@@ -27,7 +27,7 @@ class FingerprintPage extends StatelessWidget {
       );
 
   Widget buildAvailability(BuildContext context) => buildButton(
-        text: 'Check Availability',
+        text: 'Check Ongoing',
         icon: Icons.event_available,
         onClicked: () async {
           final isAvailable = await LocalAuthApi.hasBiometrics();
